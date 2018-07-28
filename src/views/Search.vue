@@ -23,7 +23,7 @@ import debounce from 'lodash.debounce';
 const API = 'https://images-api.nasa.gov/search';
 
 export default {
-  name: "Search",
+  name: 'Search',
   data() {
     return {
       searchValue: '',
@@ -31,6 +31,7 @@ export default {
     };
   },
   methods: {
+    // eslint-disable-next-line
     handlerInput: debounce(function() {
       axios.get(`${API}?q=${this.searchValue}&media_type=image`)
         .then((response) => {
@@ -44,6 +45,7 @@ export default {
   },
 };
 </script>
+/*eslint linebreak-style: ["error", "windows"]*/
 <style lang="scss" scoped>
 .wrapper {
   display: flex;
